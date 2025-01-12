@@ -1,3 +1,197 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+}
+
+.react-calendar__tile--active {
+  background-color: #c3ebfa !important;
+  color: black !important;
+}
+
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-toolbar-label {
+  text-align: right !important;
+  padding: 0px 20px !important;
+}
+
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+
+.rbc-btn-group:last-child button {
+  border: none !important;
+  background-color: #f1f0ff !important;
+  margin-left: 2px !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
+}
+
+.rbc-time-view {
+  border-color: #eee !important;
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+.rbc-time-content {
+  border: none !important;
+}
+
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0px 20px !important;
+}
+
+.rbc-timeslot-group {
+  background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+
+/* General styling for rbc-event */
+.rbc-event {
+    border: none !important;
+    color: black !important;
+    padding: 10px !important;
+    width: 100% !important;
+    display: grid !important;
+    place-items: center !important; /* Center content */
+    text-align: center !important;
+    font-size: 0.9em; /* Smaller font for better fit */
+  }
+  
+  /* Background colors */
+  .rbc-event:nth-child(1) {
+    background-color: #e2f8ff !important;
+    width: 100% !important;
+    
+  }
+  .rbc-event:nth-child(2) {
+    background-color: #fefce8 !important;
+  }
+  .rbc-event:nth-child(3) {
+    background-color: #f2f1ff !important;
+  }
+  .rbc-event:nth-child(4) {
+    background-color: #fdf2fb !important;
+  }
+  .rbc-event:nth-child(5) {
+    background-color: #d2f8cb !important;
+  }
+  
+  /* Adjust for small screens */
+  @media screen and (max-width: 768px) {
+    .rbc-time-slot {
+      height: 2rem !important; /* Reduce slot height */
+    }
+  
+    .rbc-event {
+      font-size: 0.8em !important; /* Smaller text size */
+      padding: 5px !important; /* Reduce padding */
+    }
+  
+    .rbc-time-view {
+      padding: 0 5px !important; /* Add spacing around the calendar */
+    }
+  
+    .rbc-time-header-cell {
+      font-size: 0.8em !important; /* Smaller font for time header */
+    }
+  }
+  
+  
+  .rbc-event-label {
+    color: gray !important;
+    margin-bottom: 5px;
+    text-align: center !important; /* Ensures label text is also centered */
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .rbc-time-header-cell {
+      font-size: 0.75em !important;
+    }
+  
+    .rbc-event {
+      font-size: 0.8em !important;
+    }
+  }
+  
+  .rbc-time-view {
+    overflow-y: auto !important;
+    max-height: 80vh; /* Restrict height for better usability */
+  }
+  .rbc-time-view .rbc-event {
+    min-width: 95% !important;
+    margin: 0 auto !important; /* Center the event block */
+  }
+  .rbc-time-slot {
+    height: 2rem !important; /* Adjust the height for better spacing */
+  }
+  
+
+  @media screen and (max-width: 320px) {
+    
+    .rbc-time-column{
+        width: 100px !important;
+
+    }
+    .rbc-event{
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+        & .rbc-event-content{
+            white-space: nowrap !important;
+            overflow: hidden !important;
+ text-wrap: nowrap !important;
+
+        }
+    }
+
+
+    
+    .rbc-time-column .rbc-label{
+ 
+        font-size: 0.8em !important;
+        margin-left: -25px !important;
+    }
+    .rbc-timeslot-group{
+        padding:0px 0px 0px 200px !important;
+        
+        width: 100% !important;
+    }
+    .rbc-timeslot-group{
+         width: 100% !important;
+    }
+    .rbc-event{
+        color: #000000 !important;
+    }
+    .rbc-events-container{
+        width: 100% !important;
+    }
+    .rbc-event-content{
+     }
+  }
+  
